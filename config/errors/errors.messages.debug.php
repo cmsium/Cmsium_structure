@@ -1,4 +1,5 @@
 <?php
+define ('NOT_FOUND', ['code' => 404 , 'text' => '404 Not Found !']);
 define ("DATA_FORMAT_ERROR",['code' => 105, 'text' => 'Неверный формат данных']);
 define ("CREATE_STRUCTURE_TYPE_ERROR",['code' => 700, 'text' => 'Ошибка создания типа']);
 define ("CREATE_STRUCTURE_TYPE_SUCCESS",['code' => 701, 'text' => 'Тип успешно создан']);

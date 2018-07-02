@@ -2,14 +2,14 @@
 
 
 function getTwigs(){
-    checkAuth();
+    
     $handler = new RelationsHandler();
     echo json_encode($handler->getTwigs());
 
 }
 
 function addWorkplace(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_POST,'addWorkplaceMask');
     if ($data === false){
@@ -29,7 +29,7 @@ function addWorkplace(){
 }
 
 function showWorkplace(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'showWorkplaceMask');
     if ($data === false){
@@ -43,7 +43,7 @@ function showWorkplace(){
 }
 
 function getWorkplaces(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'getWorkplacesMask');
     if ($data === false){
@@ -77,7 +77,7 @@ function getWorkplaces(){
 
 
 function addPosition() {
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_POST, 'addPositionMask');
     if ($data === false) {
@@ -91,7 +91,7 @@ function addPosition() {
 }
 
 function deletePosition(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'deletePositionMask');
     if ($data === false){
@@ -104,7 +104,7 @@ function deletePosition(){
 }
 
 function getPositions(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'getPositionsMask');
     if ($data === false){
@@ -116,7 +116,7 @@ function getPositions(){
 }
 
 function showPosition(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'showPositionMask');
     if ($data === false){
@@ -128,7 +128,7 @@ function showPosition(){
 }
 
 function addType(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_POST,'addStructureTypeMask');
     if ($data === false){
@@ -142,7 +142,7 @@ function addType(){
 }
 
 function deleteType(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'deleteStructureTypeMask');
     if ($data === false){
@@ -155,7 +155,7 @@ function deleteType(){
 }
 
 function addObject(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'addStructureObjectMask');
     if ($data === false){
@@ -176,7 +176,7 @@ function addObject(){
 }
 
 function updateObject(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_POST,'updateStructureObjectMask');
     if ($data === false){
@@ -191,7 +191,7 @@ function updateObject(){
 }
 
 function deleteObject(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'deleteStructureObjectMask');
     if ($data === false){
@@ -205,7 +205,7 @@ function deleteObject(){
 
 
 function getObjects(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'getStructureObjectsMask');
     if ($data === false){
@@ -246,7 +246,7 @@ function getObjects(){
 }
 
 function getTypes(){
-    checkAuth();
+    
     $type_handler = new DataModel('structure_types');
     $types = $type_handler->getAll(['start'=>0,'limit'=>10000]);
     if ($types){
@@ -258,7 +258,7 @@ function getTypes(){
 }
 
 function showObject(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'showObjectMask');
     if ($data === false){
@@ -274,7 +274,7 @@ function showObject(){
 }
 
 function getCrossTwigNodes(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_GET,'showCrossTwigNodesMask');
     if ($data === false){
@@ -286,7 +286,7 @@ function getCrossTwigNodes(){
 }
 
 function addToStructure(){
-    checkAuth();
+    
     $validator = Validator::getInstance();
     $data = $validator->validateAllByMask($_POST,'addToStructureMask');
     if ($data === false){

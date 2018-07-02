@@ -458,26 +458,6 @@ class Masks{
             'role' => ['func'=>'StrNumbers','props'=>['min' => 1, 'max' => 64],'required'=>true],
             'actions' =>['func'=>'multiple','props'=>['func'=>'Md5Type'],'required'=>true]],
 
-      'createTypeMask' => [
-          'model' => ['func'=>'SQLDataModelList',
-                      'props'=>['allowed_types' => EVENT_ALLOWED_TYPES, 'model_items' => EVENT_VALIDATE_MODEL_ITEMS],
-                      'required'=>true],
-          'name' => ['func'=>'CirrLatName',
-                     'props'=>['min' => 3, 'max' => 64],
-                     'required'=>true]],
-        'updateTypeMask' => [
-            'model' => ['func'=>'SQLDataModelList',
-                'props'=>['allowed_types' => EVENT_ALLOWED_TYPES, 'model_items' => EVENT_VALIDATE_MODEL_ITEMS],
-                'required'=>false],
-            'type_name' => ['func'=>'CirrLatName',
-                'props'=>['min' => 3, 'max' => 64],
-                'required'=>true],
-            'update_type' => ['func'=>'ValueFromList',
-                'props'=>['list'=>['delete','add']],
-                'required'=>true],
-            'columns' => ['func'=>'multiple',
-                'props'=>['func'=>'CirrLatName','min' => 3, 'max' => 64],
-                'required'=>false],],
       'createEventAddress' => [
           'adres' => [
               'func'=>'ListOfAlphaNumerics',

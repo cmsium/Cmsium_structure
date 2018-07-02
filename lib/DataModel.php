@@ -81,13 +81,13 @@ class DataModel{
     public function read($id,$additional=null){
         $conn = DBConnection::getInstance();
         $add_str='';
-        if ($additional['fkeys']){
+        if (isset($additional['fkeys'])){
             foreach ($additional['fkeys'] as $fkey => $fvalue){
                 $handler = new DataModel($fvalue);
                 $add_str .= " JOIN $fvalue ON {$this->table_name}.$fkey = $fvalue.{$handler->id_info['COLUMN_NAME']}";
             }
         }
-        if ($additional['joins']){
+        if (isset($additional['joins'])){
             foreach ($additional['joins'] as $jkey => $jvalue){
                 $add_str .= " JOIN $jvalue ON {$this->table_name}.{$this->id_info['COLUMN_NAME']} = $jvalue.{$this->id_info['COLUMN_NAME']} ";
             }
